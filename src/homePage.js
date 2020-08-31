@@ -10,9 +10,9 @@ let contenido = `<b>Bienvenidos a DH Movies el mejor sitio para encontrar las me
 		return 0;
 	});
 	let listado = `<ol>`
-	for ( i = 0; i < movies.length; i++){
-    	listado += `<li> ${movies[i].title} </li>`
-	}
+	lista = movies.map(function (movis){
+		listado += `<li>${movis.title} :</li>`;
+	});
 	listado += `</ol>`
 	contenido += listado;
 	contenido += `<u>Recordá que podés visitar las secciones</u>: </br></br>

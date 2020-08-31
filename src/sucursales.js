@@ -5,9 +5,12 @@ let sucursales = `<b> Nuestras Salas.</b> <hr>
     <u>Listado de salas</u>: </br>`;
     
 let listado = `<ol>`
-for ( i = 0; i < theaters.length; i++){
-    listado += `<li> <u>${theaters[i].name}</u> </br> ${theaters[i].address} </br> ${theaters[i].description}" </li>` 
-}
+//for ( i = 0; i < theaters.length; i++){
+//    listado += `<li> <u>${theaters[i].name}</u> </br> ${theaters[i].address} </br> ${theaters[i].description}" </li>` 
+//}
+lista = theaters.map(function (selecte){
+	listado += `<li> <u>${selecte.name}</u> </br> ${selecte.address} </br> ${selecte.description}" </li> </br>` 
+})
 listado += `</ol>`
 sucursales += listado;
 

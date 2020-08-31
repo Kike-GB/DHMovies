@@ -7,7 +7,7 @@ let preguntasFrecuentes = require('./src/preguntasFrecuentes');
 
 module.exports = {
     '/': function () {
-        return raiz;
+        return homePage;
     },
     '/en-cartelera': function () {
         return enCartelera;

@@ -1,12 +1,12 @@
 let faqs = require('../data/faqs');
 
 let preguntasFrecuentes = `<b>Preguntas Frecuentes.</b> <hr>
-<u>Total de preguntas</u>: ${faqs.length} películas </br></br>
+<u>Total de preguntas</u>: ${faqs.length} preguntas </br></br>
 <u>Listado de preguntas</u>: </br>`;
-let listado = `<ol>`
-	for ( i = 0; i < faqs.length; i++){
-    	listado += `<li> <b>${faqs[i].faq_title}</b> </br> <i>${faqs[i].faq_answer} </i> </li></br>`
-	}
+let listado = `<ol>`;
+lista = faqs.map(function (selecte){
+	listado += `<li> <b>${selecte.faq_title}</b> </br> <i>${selecte.faq_answer} </i> </li></br>`
+})
 listado += `</ol>`
 preguntasFrecuentes += listado;
 
